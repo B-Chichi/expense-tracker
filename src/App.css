@@ -14,20 +14,21 @@
   color: black;
 }
 
-.bar{
-  margin-top: 18px;
-  margin-right: 10px;
+.label{
+  color: black;
 }
+
+
 
 h3{
   color: black;
 }
 
 .form{
-  
   display:flex;
   flex-direction: column;
   align-items: center;
+ border-color: black;
   
 }
 
@@ -36,8 +37,7 @@ h3{
 }
 
 .table{
-  margin-top: 18px;
-  margin-left: 10px;
+  
   color: black;
 }
 

@@ -13,13 +13,13 @@ function ExpenseTable({ expenses }) {
         </tr>
       </thead>
       <tbody>
-        {expenses.map((expense, index) => (
+        {expenses.map((name,amount,category,description,date) => (
           <tr key={index}>
-            <td>{expense.name}</td>
-            <td>{expense.description}</td>
-            <td>{expense.amount}</td>
-            <td>{expense.category}</td>
-            <td>{expense.date}</td>
+            <td>{name}</td>
+            <td>{description}</td>
+            <td>{amount}</td>
+            <td>{category}</td>
+            <td>{date}</td>
           </tr>
         ))}
       </tbody>

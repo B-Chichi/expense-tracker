@@ -43,7 +43,7 @@ function ExpenseForm({ onAddExpense }) {
           placeholder="Expense Name"
         />
         ,
-        <input
+        <textarea
           name="description"
           value={formData.description}
           onChange={handleChange}
@@ -58,18 +58,18 @@ function ExpenseForm({ onAddExpense }) {
         />
         ,
         <input
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
-          placeholder="Date"
-        />
-        ,
-        <input
           name="category"
           value={formData.category}
           onChange={handleChange}
           placeholder="Category"
+        />,
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
         />
+        
         <button type="submit" className="button">
           Add Expense
         </button>
