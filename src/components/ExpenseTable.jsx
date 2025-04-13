@@ -1,6 +1,6 @@
 import React from "react";
 
-function ExpenseTable({ expenses }) {
+function ExpenseTable({expenses }) {
   return (
     <table>
       <thead>
@@ -13,13 +13,13 @@ function ExpenseTable({ expenses }) {
         </tr>
       </thead>
       <tbody>
-        {expenses.map((name,amount,category,description,date) => (
+        {expenses.map((expense,index) => (
           <tr key={index}>
-            <td>{name}</td>
-            <td>{description}</td>
-            <td>{amount}</td>
-            <td>{category}</td>
-            <td>{date}</td>
+            <td>{expense.name}</td>
+            <td>{expense.description}</td>
+            <td>{expense.amount}</td>
+            <td>{expense.category}</td>
+            <td>{expense.date}</td>
           </tr>
         ))}
       </tbody>
