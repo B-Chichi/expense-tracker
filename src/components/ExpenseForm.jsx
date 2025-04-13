@@ -4,7 +4,7 @@ function ExpenseForm({ onAddExpense }) {
   //takes a prop that will be called when the form is submitted
   const [formData, setFormData] = useState({
     //creates state for the form inputs which will hold the values,,setFormData will update the values
-    name: "", //line 5-9 define initial values and sets them to empty strings
+    name: "", //lines define initial values and sets them to empty strings
     description: "",
     category: "",
     amount: "",
@@ -41,21 +41,25 @@ function ExpenseForm({ onAddExpense }) {
     <form className="form" onSubmit={handleSubmit}>
       <h3 className="h3">Add Expense</h3>
       <p className="text">Enter your expense details below</p>
-      <label htmlFor="title">Expense name</label>
-      <input
+      
+      <input 
         className="input"
         name="name"
+        type="text"
         value={formData.name}
         onChange={handleChange}
+        placeholder="Expense Name"
+        autoComplete="name"//I added an autocomplete feature just to see how it works
       />
-      <label htmlFor="title">Description</label>
-      <textarea
+      
+      <textarea  //I had addded <label htmlFor> in my input fields but the console told me I was using it incorrectly,,code was still working though
         className="input"
         name="description"
         value={formData.description}
         onChange={handleChange}
+        placeholder="Description"
       />
-      <label htmlFor="title">Amount</label>
+      
 
       <input
         className="input"
@@ -63,20 +67,23 @@ function ExpenseForm({ onAddExpense }) {
         type="number"
         value={formData.amount}
         onChange={handleChange}
+        placeholder="Amount"
       />
-      <label htmlFor="title">Category</label>
+     
       <input
         className="input"
         name="category"
         value={formData.category}
         onChange={handleChange}
+        placeholder="Category"
       />
-      <label htmlFor="title"> Date</label>
+      
 
       <input
         className="input"
         type="date"
         name="date"
+        placeholder="Date"
         value={formData.date}
         onChange={handleChange}
       />

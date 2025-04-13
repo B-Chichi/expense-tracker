@@ -40,5 +40,11 @@ h3{
   color: black;
   width: 50%;
   row-gap: 20px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
 }
 
+th,td{
+  border: 1px solid black;
+}

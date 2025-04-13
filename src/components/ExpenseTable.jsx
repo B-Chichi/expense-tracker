@@ -1,7 +1,7 @@
 import React from "react";
 
-function ExpenseTable({expenses }) {
-  return (
+function ExpenseTable({expenses }) {//function that takes expenses as a prop for destructuring
+  return (//table header
     <table>
       <thead>
         <tr>
@@ -13,7 +13,9 @@ function ExpenseTable({expenses }) {
         </tr>
       </thead>
       <tbody>
-        {expenses.map((expense,index) => (
+        
+        {expenses.map((expense, index) => (//loops through each item in the expenses arrray and creates a row for each expense
+          //each td displays properties from the expense object
           <tr key={index}>
             <td>{expense.name}</td>
             <td>{expense.description}</td>
